@@ -1,3 +1,5 @@
+import math
+
 # #### Inteiros (`int`)
 
 # 1. Escreva um programa que soma dois números inteiros inseridos pelo usuário.
@@ -6,7 +8,6 @@
 # 4. Faça um programa que peça dois números inteiros e imprima a divisão inteira do primeiro pelo segundo.
 numero_1 = int(input("Digite o primeiro número inteiro: "))
 numero_2 = int(input("Digite o segundo número inteiro: "))
-
 divisao_inteira = numero_1 // numero_2
 print(f"A divisão inteira é {divisao_inteira}")
 
@@ -19,6 +20,9 @@ print(f"A divisão inteira é {divisao_inteira}")
 # 8. Desenvolva um programa que calcule a potência de um número (base e expoente fornecidos pelo usuário).
 # 9. Faça um programa que converta a temperatura de Celsius para Fahrenheit.
 # 10. Escreva um programa que calcule a área de um círculo, recebendo o raio como entrada.
+raio_do_circulo = float(input("Digite o valor do raio: "))
+area_do_circulo = math.pi * raio_do_circulo ** 2
+print(f"{area_do_circulo:.2f}")
 
 # #### Strings (`str`)
 
