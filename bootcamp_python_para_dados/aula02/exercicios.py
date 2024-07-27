@@ -123,11 +123,3 @@ num1 = int(input("Digite um valor: "))
 num2 = int(input("Digite outro valor: "))
 resultado_diferenca = (num1 != num2)
 print("Resultado da diferença:", resultado_diferenca)
-
-# #### try-except e if
-
-# 21: Conversor de Temperatura
-# 22: Verificador de Palíndromo
-# 23: Calculadora Simples
-# 24: Classificador de Números
-# 25: Conversão de Tipo com Validação
