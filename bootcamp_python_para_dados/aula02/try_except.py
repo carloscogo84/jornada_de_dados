@@ -1,4 +1,4 @@
-# #### try-except e if
+# try-except e if
 
 try:
     numero_1 = int(input("Digite um número inteiro: "))
