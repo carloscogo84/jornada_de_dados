@@ -163,19 +163,83 @@ print(pares)
 # Exercício 10. Agregação de Dados por Categoria
 # Objetivo:** Dado um conjunto de registros de vendas, calcular o total de vendas por categoria.
 
+vendas = [
+    {"categoria": 'eletronicos', 'valor': 1200},
+    {"categoria": 'livros', 'valor': 200},
+    {"categoria": 'eletronicos', 'valor': 800}
+]
+
+total_por_categoria = {}
+for venda in vendas:
+    categoria = venda['categoria']
+    valor = venda['valor']
+    if categoria in total_por_categoria:
+        total_por_categoria[categoria] += valor
+    else:
+        total_por_categoria[categoria] = valor
+
+print(total_por_categoria)
+
+
 # Exercícios com WHILE
 
 # Exercício 11. Leitura de Dados até Flag
 # Ler dados de entrada até que uma palavra-chave específica ("sair") seja fornecida.
+dados = []
+entrada = ""
+
+while entrada.lower() != "sair":
+    entrada = input("Digite um valor ou (sair) para terminar: ")
+    if entrada.lower() != "sair":
+        dados.append(entrada)
+    else:
+        print(f'Você digitou {dados}')
+        print("Programa finalizado")
+
 
 # Exercício 12. Validação de Entrada
 # Solicitar ao usuário um número dentro de um intervalo específico até que a entrada seja válida.
+numero = int(input("Informe um número entre 1 e 10: "))
+
+while numero < 1 or numero > 10:
+    print("Número fora do intervalo")
+    numero = int(input("Informe um número entre 1 e 10: "))
+print(numero)
+
 
 # Exercício 13. Consumo de API Simulado
 # Simular o consumo de uma API paginada, onde cada "página" de dados é processada em loop até que não haja mais páginas.
+pagina_atual = 1
+pagina_total = 5
+
+while pagina_atual <= pagina_total:
+    print(f"processando {pagina_atual} de {pagina_total}")
+    pagina_atual += 1
+
+print("Todas as páginas foram processadas")
+
 
 # Exercício 14. Tentativas de Conexão
 # Simular tentativas de reconexão a um serviço com um limite máximo de tentativas.
+tentativas_maximas = 5
+tentativas = 1
+while tentativas <= tentativas_maximas:
+    print(f"Tentativas {tentativas} de {tentativas_maximas}")
+    if True:
+        print("Conexão bem-sucedida!")
+        break
+    tentativas += 1
+else:
+    print("Falha ao se conectar")
 
 # Exercício 15. Processamento de Dados com Condição de Parada
 # Processar itens de uma lista até encontrar um valor específico que indica a parada.
+itens = [1, 2, 3, "parar", 5]
+
+i = 0
+while i < len(itens):
+    if itens[i] == "parar":
+        print("Parada encontrada")
+        break
+    print("Processando item:", {itens[i]})
+    i += 1
